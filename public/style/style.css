@@ -1,0 +1,81 @@
+body {
+	background-color: aliceblue;
+}
+
+.container {
+	border: 1px solid black;
+	border-radius: 15px 15px 15px 15px;
+}
+.block-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.identity {
+	display: block;
+}
+
+#warning {
+	color: red;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+	background-color: #1960a8;
+	color: white;
+	border-radius: 15px 15px 15px 15px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	font-size: 15px;
+	top: 25%;
+}
+button:disabled {
+	background-color: lightgray;
+}
+
+hr {
+	height: 0px;
+	border: none;
+	border-top: 1px solid black;
+	padding: None;
+}
+
+#aes-key {
+	display: block;
+}
+
+#aes-key-base64 {
+	width: 500px;
+}
+
+textarea {
+	width: 300px;
+	min-height: 70px;
+	border-radius: 15px 15px 15px 15px;
+	resize: none;
+	border: 1px solid black;
+}
+
+input {
+	width: 300px;
+	height: 50px;
+	columns: 50;
+	border-radius: 15px 15px 15px 15px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+textarea[readonly],
+input[readonly] {
+	background-color: lightgray;
+}
+
+#aes-plaintext-textarea,
+#aes-decipher-textarea,
+#aes-cipher-textarea {
+	height: 60px;
+}

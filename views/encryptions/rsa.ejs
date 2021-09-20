@@ -1,0 +1,54 @@
+<h2 id='rsa'>RSA</h2>
+<span>Asymmetric-key Algorithm</span>
+<div class="container">
+    <form action="/webform/rsa/enc" method="post">
+        <div class="block-container">
+            <div class="left">
+                <div class="item">
+                    <span class="identity">
+                        Plaintext
+                    </span>
+                    <textarea name="rsa-plaintext-textarea" id="rsa-plaintext-textarea" placeholder="Please enter a plain text."><%= rsaPlaintextTextArea %></textarea>
+                </div>
+            </div>
+
+            <div class="middle">
+                <button type="submit" id="rsa-encrypt-button"> Encrypt </button>
+            </div>
+
+            <div class="right">
+                <span class="identity">
+                    Cipher
+                </span>
+                <textarea name="rsa-cipher-textarea" class="rsa-cipher-textarea" readonly><%= rsaCipherTextArea %></textarea>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+
+    <form action="/webform/rsa/dec" method="post">
+        <div class="block-container">
+            <div class="left">
+
+                <div class="item">
+                    <span class="identity">
+                        Decryption
+                    </span>
+                    <textarea name="rsa-decrypt-textarea" class="rsa-decipher-textarea" readonly><%= rsaDecipherTextArea %></textarea>
+                </div>
+            </div>
+
+            <div class="middle">
+                <button type="submit" id="rsa-decrypt-button"> Decrypt </button>
+            </div>
+
+            <div class="right">
+                <span class="identity">
+                    Cipher
+                </span>
+                <textarea name="rsa-cipher-textarea" class="rsa-cipher-textarea" placeholder='Please enter a cipher text'><%= rsaCipherTextArea %></textarea>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,78 @@
+<h2 id="aes">AES</h2>
+<span>Symmetric-key Algorithm</span>
+<div class="container">
+    <form action="/webform/aes/enc" method="post" id='form1'>
+        <div class="block-container">
+            <span class="identity" id="aes-key">
+                AES-KEY
+                <br>
+                <input type="text" name="aes-key-input" class="aes-key-input" maxlength="32" value="<%= aesKeyInput %>"
+                    placeholder="Enter your key first">
+                <span id="aes-key-length">( 0 / 32 )</span>
+                <span id="warning">
+                    <%= warning %>
+                </span>
+                <br> Base64 =
+                <br>
+                <input type="text" id="aes-key-base64" value="<%= aesKeyInputBase64 %>" maxlength="44" />
+            </span>
+        </div>
+
+        <hr>
+
+        <div class="block-container">
+            <div class="left">
+                <div class="item">
+                    <span class="identity">
+                        Plaintext
+                    </span>
+                    <textarea name="aes-plaintext-textarea" id="aes-plaintext-textarea"
+                        placeholder="Please enter your plaintext."><%= aesPlaintextTextArea %></textarea>
+                </div>
+            </div>
+
+            <div class="middle">
+                <button type="submit" id="aes-encrypt-button"> Encrypt </button>
+            </div>
+
+            <div class="right">
+                <span class="identity">
+                    Cipher
+                </span>
+                <textarea class="aes-cipher-textarea" name="aes-cipher-textarea"
+                    readonly><%= aesCipherTextArea %></textarea>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+
+    <form action="/webform/aes/dec" method="post" id='form2'>
+        <input type="text" name="aes-key-input" class="aes-key-input" maxlength="32" value="<%= aesKeyInput %>"
+            hidden="true">
+        <div class="block-container">
+            <div class="left">
+
+                <div class="item">
+                    <span class="identity">
+                        Decryption
+                    </span>
+                    <textarea name="aes-decipher-textarea" id="aes-decipher-textarea"
+                        readonly><%= aesDecipherTextArea %></textarea>
+                </div>
+            </div>
+
+            <div class="middle">
+                <button type="submit" id="aes-decrypt-button"> Decrypt</button>
+            </div>
+
+            <div class="right">
+                <span class="identity">
+                    Cipher
+                </span>
+                <textarea name="aes-cipher-textarea" class="aes-cipher-textarea"><%= aesCipherTextArea %></textarea>
+            </div>
+
+        </div>
+    </form>
+</div>
